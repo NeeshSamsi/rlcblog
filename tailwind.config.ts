@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import theme from "tailwindcss/defaultTheme"
 
 const config: Config = {
   content: [
@@ -7,10 +8,12 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      serif: ["var(--font-playfair)", ...theme.fontFamily.serif],
+      sans: ["var(--font-nunito)", ...theme.fontFamily.sans],
+    },
     extend: {
       fontFamily: {
-        serif: ["var(--font-playfair)"],
-        sans: ["var(--font-nunito)"],
         algerian: ["var(--font-algerian)"],
       },
     },
