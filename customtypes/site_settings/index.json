@@ -1,0 +1,59 @@
+{
+  "id": "site_settings",
+  "label": "Site Settings",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "linkedin_url": {
+        "type": "Link",
+        "config": {
+          "label": "LinkedIn URL",
+          "placeholder": "https://linkedin.com/in/neeshsamsi",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "instagram_url": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram URL",
+          "placeholder": "https://instagram.com/neeshsamsi",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "email_addresses": {
+        "type": "Group",
+        "config": {
+          "label": "Email Addresses",
+          "fields": {
+            "email": {
+              "type": "Text",
+              "config": {
+                "label": "Email",
+                "placeholder": "contactemail@gmail.com"
+              }
+            }
+          }
+        }
+      },
+      "phone_numbers": {
+        "type": "Group",
+        "config": {
+          "label": "Phone Numbers",
+          "fields": {
+            "phone_number": {
+              "type": "Text",
+              "config": {
+                "label": "Phone Number",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

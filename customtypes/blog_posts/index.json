@@ -1,0 +1,56 @@
+{
+  "id": "blog_posts",
+  "label": "Blog Posts",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "cover_image": {
+        "type": "Image",
+        "config": {
+          "label": "Cover Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": "How to Land Your Dream Internship: A Guide for Law Students"
+        }
+      },
+      "author": {
+        "type": "Link",
+        "config": {
+          "label": "Author",
+          "select": "document",
+          "customtypes": ["authors"]
+        }
+      },
+      "summary": {
+        "type": "Text",
+        "config": {
+          "label": "Summary",
+          "placeholder": ""
+        }
+      },
+      "post_content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Post Content",
+          "placeholder": "Your blog post goes here",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,heading2"
+        }
+      }
+    }
+  }
+}
