@@ -1,7 +1,13 @@
 import type { Metadata } from "next"
+
 import { Playfair_Display, Nunito_Sans } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
+
+import Header from "./components/Header"
+import Navbar from "@/app/components/Navbar"
+import Wrapper from "@/app/components/Wrapper"
+import Footer from "@/app/components/Footer"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -34,7 +40,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${nunito.variable} ${algerian.variable}`}
       >
-        {children}
+        <Header />
+        <Navbar />
+        <Wrapper>
+          {children}
+          <Footer />
+        </Wrapper>
       </body>
     </html>
   )
