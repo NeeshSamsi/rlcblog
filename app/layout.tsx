@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overscroll-x-none scroll-smooth">
       <body
         className={`${playfair.variable} ${nunito.variable} ${algerian.variable}`}
       >
