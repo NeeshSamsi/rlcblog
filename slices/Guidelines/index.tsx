@@ -1,3 +1,4 @@
+import Heading2 from "@/app/components/Heading2"
 import { Content } from "@prismicio/client"
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
 
@@ -18,9 +19,7 @@ const Guidelines = ({ slice }: GuidelinesProps): JSX.Element => {
     >
       {slice.items.map(({ title, content }, i) => (
         <div key={i} className="space-y-4">
-          <h2 className="font-serif text-2xl font-semibold md:text-4xl">
-            {title}
-          </h2>
+          <Heading2>{title}</Heading2>
           <div className="prose prose-black prose-lg md:prose-2xl space-y-4 marker:text-black">
             <PrismicRichText field={content} />
           </div>

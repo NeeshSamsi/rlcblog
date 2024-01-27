@@ -1,3 +1,4 @@
+import Heading2 from "@/app/components/Heading2"
 import { Content } from "@prismicio/client"
 import { SliceComponentProps } from "@prismicio/react"
 
@@ -16,9 +17,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="space-y-2 md:space-y-6"
     >
-      <h2 className="font-serif text-2xl font-semibold md:text-4xl">
-        {slice.primary.title}
-      </h2>
+      <Heading2>{slice.primary.title}</Heading2>
       <p className="font-sans text-lg md:text-2xl">
         {slice.primary.description}
       </p>

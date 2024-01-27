@@ -1,3 +1,4 @@
+import Heading2 from "@/app/components/Heading2"
 import { Content } from "@prismicio/client"
 import { PrismicNextImage } from "@prismicio/next"
 import { SliceComponentProps } from "@prismicio/react"
@@ -17,9 +18,7 @@ const Message = ({ slice }: MessageProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="my-8 space-y-2 md:my-12 md:space-y-6"
     >
-      <h2 className="font-serif text-2xl font-semibold md:text-4xl">
-        {slice.primary.title}
-      </h2>
+      <Heading2>{slice.primary.title}</Heading2>
       <div className="grid grid-cols-1 gap-2 border border-black p-4 md:grid-cols-[1fr,4fr] md:gap-4">
         <div className="grid gap-2">
           <PrismicNextImage

@@ -27,7 +27,9 @@ const Founders = ({ slice }: FoundersProps): JSX.Element => {
             <p className="font-sans text-lg font-extralight capitalize">
               {designation}
             </p>
-            <p className="font-serif text-3xl font-medium">{name}</p>
+            <p className="font-serif text-xl font-medium md:text-center md:text-2xl">
+              {name}
+            </p>
           </div>
         </div>
       ))}
