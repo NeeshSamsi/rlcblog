@@ -1,0 +1,35 @@
+{
+  "id": "guidelines",
+  "type": "SharedSlice",
+  "name": "Guidelines",
+  "description": "Guidelines",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -5,7 +5,31 @@
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {
+    "Header": {
+      "navigation_items": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation Items",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "linkedin_url": {
         "type": "Link",
         "config": {
@@ -23,6 +47,15 @@
           "allowTargetBlank": true,
           "select": null
         }
+      }
+    },
+    "Footer": {
+      "college_description": {
+        "type": "Text",
+        "config": {
+          "label": "College Description",
+          "placeholder": ""
+        }
       },
       "email_addresses": {
         "type": "Group",
@@ -33,7 +66,7 @@
               "type": "Text",
               "config": {
                 "label": "Email",
-                "placeholder": "contactemail@gmail.com"
+                "placeholder": ""
               }
             }
           }
@@ -44,14 +77,38 @@
         "config": {
           "label": "Phone Numbers",
           "fields": {
-            "phone_number": {
+            "number": {
               "type": "Text",
               "config": {
-                "label": "Phone Number",
+                "label": "Number",
                 "placeholder": ""
               }
             }
           }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "og_image": {
+        "type": "Image",
+        "config": {
+          "label": "OG Image",
+          "constraint": {},
+          "thumbnails": []
         }
       }
     }

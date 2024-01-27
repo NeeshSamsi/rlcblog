@@ -18,16 +18,16 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "heroCentered",
+		"variation": "centered",
 		"primary": {
 			"heading": {
 				"__TYPE__": "FieldContent",
-				"value": "through",
+				"value": "job",
 				"type": "Text"
 			},
 			"tagline": {
 				"__TYPE__": "FieldContent",
-				"value": "sad",
+				"value": "arrange",
 				"type": "Text"
 			}
 		},

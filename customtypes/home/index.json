@@ -6,19 +6,19 @@
   "status": true,
   "json": {
     "Main": {
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {}
-        }
-      },
       "featured_post": {
         "type": "Link",
         "config": {
           "label": "Featured Post",
           "select": "document",
           "customtypes": ["blog_posts"]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
         }
       }
     },
