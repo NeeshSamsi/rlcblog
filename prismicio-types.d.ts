@@ -119,7 +119,7 @@ export type BlogPostsDocument<Lang extends string = string> =
     Lang
   >
 
-type HomeDocumentDataSlicesSlice = never
+type HomeDocumentDataSlicesSlice = HeroSlice
 
 /**
  * Content for Home documents

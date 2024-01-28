@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 
 import { createClient } from "@/prismicio"
+import { SliceZone } from "@prismicio/react"
+import { components } from "@/slices"
 
 import Post from "@/app/components/Post"
 import Heading2 from "@/app/components/Heading2"
@@ -25,6 +27,10 @@ export default async function Page() {
 
   return (
     <>
+      <main>
+        <SliceZone slices={page.data.slices} components={components} />
+      </main>
+
       <section className="my-12 md:my-16">
         <Post
           featured
