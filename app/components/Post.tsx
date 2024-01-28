@@ -33,9 +33,12 @@ export default function Post({
   return (
     <Link
       href={`/blog/${uid}`}
-      className={cn("relative flex flex-col border border-black font-sans", {
-        "md:flex-row md:text-start": featured,
-      })}
+      className={cn(
+        "card-hover relative flex flex-col border border-black font-sans",
+        {
+          "md:flex-row md:text-start": featured,
+        },
+      )}
     >
       {featured && (
         <p className="absolute left-0 top-0 -translate-x-px -translate-y-1/2 border border-black bg-white px-4 py-2 text-lg">
@@ -47,6 +50,8 @@ export default function Post({
         className={cn("mx-auto aspect-[4/3] w-full object-cover lg:mx-0", {
           "md:aspect-square md:w-[40%]": featured,
         })}
+        priority={featured}
+        sizes="100vw"
       />
 
       <div className="p-4">

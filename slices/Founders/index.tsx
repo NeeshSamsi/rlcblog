@@ -18,7 +18,10 @@ const Founders = ({ slice }: FoundersProps): JSX.Element => {
       className="flex flex-wrap justify-center gap-8 md:justify-between"
     >
       {slice.items.map(({ avatar, designation, name }, i) => (
-        <div key={i} className="grid gap-6 border border-black p-4 text-center">
+        <div
+          key={i}
+          className="card-hover grid gap-6 border border-black p-4 text-center"
+        >
           <PrismicNextImage
             field={avatar}
             className="aspect-square w-52 object-cover"

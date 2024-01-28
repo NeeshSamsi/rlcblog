@@ -14,7 +14,7 @@ export default async function Footer() {
   } = settings.data
 
   return (
-    <footer id="contact" className="mb-8 mt-16 grid gap-8 text-xl sm:text-base">
+    <footer id="contact" className="mb-8 mt-16 grid gap-8 text-xl sm:text-lg">
       <div className="flex flex-wrap justify-between gap-8">
         <div>
           <Image
@@ -27,7 +27,7 @@ export default async function Footer() {
           <p className="max-w-[35ch]">{description}</p>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-serif text-xl font-semibold">
+          <h3 className="font-serif text-2xl font-semibold">
             Contact information
           </h3>
           <div className="grid gap-2">
@@ -44,7 +44,9 @@ export default async function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-serif text-xl font-semibold">Navigation links</h3>
+          <h3 className="font-serif text-2xl font-semibold">
+            Navigation links
+          </h3>
           <div className="grid gap-2">
             {navigation_items.map(({ link, label }, i) => (
               <PrismicNextLink key={i} field={link} className="inline-block">

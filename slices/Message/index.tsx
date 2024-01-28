@@ -19,7 +19,7 @@ const Message = ({ slice }: MessageProps): JSX.Element => {
       className="my-8 space-y-2 md:my-12 md:space-y-6"
     >
       <Heading2>{slice.primary.title}</Heading2>
-      <div className="grid grid-cols-1 gap-2 border border-black p-4 md:grid-cols-[1fr,4fr] md:gap-4">
+      <div className="card-hover grid grid-cols-1 gap-2 border border-black p-4 md:grid-cols-[1fr,4fr] md:gap-4">
         <div className="grid gap-2">
           <PrismicNextImage
             field={slice.primary.avatar}
