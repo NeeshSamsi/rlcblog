@@ -416,6 +416,28 @@ interface SiteSettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   og_image: prismic.ImageField<never>
+
+  /**
+   * Deployed URL field in *Site Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_settings.deployed_url
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  deployed_url: prismic.KeyTextField
+
+  /**
+   * Site Name field in *Site Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_settings.site_name
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  site_name: prismic.KeyTextField
 }
 
 /**

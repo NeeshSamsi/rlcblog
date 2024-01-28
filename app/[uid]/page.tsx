@@ -25,6 +25,18 @@ export async function generateMetadata({
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
+    openGraph: {
+      title: page.data.meta_title || "",
+      description: page.data.meta_description || "",
+      images: [page.data.meta_image.url || ""],
+    },
+    twitter: {
+      title: page.data.meta_title || "",
+      description: page.data.meta_description || "",
+    },
+    alternates: {
+      canonical: `/${params.uid}`,
+    },
   }
 }
 

@@ -110,6 +110,20 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "deployed_url": {
+        "type": "Text",
+        "config": {
+          "label": "Deployed URL",
+          "placeholder": ""
+        }
+      },
+      "site_name": {
+        "type": "Text",
+        "config": {
+          "label": "Site Name",
+          "placeholder": ""
+        }
       }
     }
   }
