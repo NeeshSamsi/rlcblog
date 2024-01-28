@@ -23,8 +23,8 @@
         "type": "Link",
         "config": {
           "label": "Link",
-          "placeholder": "https://linkedin.com/in/neeshsamsi",
-          "select": "media"
+          "placeholder": "https://linkedin.com/",
+          "select": "web"
         }
       }
     }

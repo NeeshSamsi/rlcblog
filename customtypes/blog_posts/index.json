@@ -24,7 +24,7 @@
         "type": "Text",
         "config": {
           "label": "Title",
-          "placeholder": "How to Land Your Dream Internship: A Guide for Law Students"
+          "placeholder": ""
         }
       },
       "author": {
@@ -48,7 +48,7 @@
           "label": "Post Content",
           "placeholder": "Your blog post goes here",
           "allowTargetBlank": true,
-          "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,heading2"
+          "multi": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
         }
       }
     }

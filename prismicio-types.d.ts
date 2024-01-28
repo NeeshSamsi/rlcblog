@@ -22,13 +22,13 @@ interface AuthorsDocumentData {
   /**
    * Link field in *Authors*
    *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: https://linkedin.com/in/neeshsamsi
+   * - **Field Type**: Link
+   * - **Placeholder**: https://linkedin.com/
    * - **API ID Path**: authors.link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkToMediaField
+  link: prismic.LinkField
 }
 
 /**
@@ -62,7 +62,7 @@ interface BlogPostsDocumentData {
    * Title field in *Blog Posts*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: How to Land Your Dream Internship: A Guide for Law Students
+   * - **Placeholder**: *None*
    * - **API ID Path**: blog_posts.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
