@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 
-import { createClient } from "@/prismicio"
+import { createClient, repositoryName } from "@/prismicio"
 
 import { Playfair_Display, Nunito_Sans } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
 
+import { PrismicPreview } from "@prismicio/next"
 import Header from "./components/Header"
 import Navbar from "@/app/components/Navbar"
 import Wrapper from "@/app/components/Wrapper"
@@ -76,6 +77,7 @@ export default function RootLayout({
           <Footer />
         </Wrapper>
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   )
 }

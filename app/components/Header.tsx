@@ -10,7 +10,6 @@ export default async function Header() {
         height={180}
         className="aspect-square w-44"
         priority
-        sizes="100vw"
       />
       <div className="space-y-2 text-center">
         <p className="text-lg md:text-2xl">RIZVI EDUCATION SOCIETY&apos;S</p>

@@ -51,7 +51,6 @@ export default function Post({
           "md:aspect-square md:w-[40%]": featured,
         })}
         priority={featured}
-        sizes="100vw"
       />
 
       <div className="p-4">
