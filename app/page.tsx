@@ -22,7 +22,7 @@ export default async function Page() {
       fetchLinks: ["authors.name", "authors.link"],
     })
   } catch (error) {
-    console.log(error)
+    console.log({ message: "Featured post is not set.", error })
   }
 
   return (
