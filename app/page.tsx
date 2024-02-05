@@ -13,17 +13,17 @@ export default async function Page() {
   const posts = await client.getAllByType("blog_posts", {
     fetchLinks: ["authors.name", "authors.link"],
   })
-  // @ts-ignore
-  const featuredPost = await client.getByID(page.data.featured_post.id, {
-    fetchLinks: ["authors.name", "authors.link"],
-  })
 
-  const {
-    last_publication_date,
-    uid,
+  let featuredPost
+
+  try {
     // @ts-ignore
-    data: { cover_image, title, author, summary },
-  } = featuredPost
+    featuredPost = await client.getByID(page.data.featured_post.id, {
+      fetchLinks: ["authors.name", "authors.link"],
+    })
+  } catch (error) {
+    console.log(error)
+  }
 
   return (
     <>
@@ -31,45 +31,55 @@ export default async function Page() {
         <SliceZone slices={page.data.slices} components={components} />
       </main>
 
-      <section className="my-12 md:my-16">
-        <Post
-          featured
-          last_publication_date={last_publication_date}
-          uid={uid}
-          cover_image={cover_image}
-          title={title}
-          author={author}
-          summary={summary}
-        />
-      </section>
+      {featuredPost && (
+        <section className="my-12 md:my-16">
+          <Post
+            featured
+            last_publication_date={featuredPost.last_publication_date}
+            uid={featuredPost.uid}
+            // @ts-ignore
+            cover_image={featuredPost.data.cover_image}
+            // @ts-ignore
+            title={featuredPost.data.title}
+            // @ts-ignore
+            author={featuredPost.data.author}
+            // @ts-ignore
+            summary={featuredPost.data.summary}
+          />
+        </section>
+      )}
 
       <section className="space-y-6">
         <Heading2>Latest Posts</Heading2>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {posts.map(
-            (
-              {
-                last_publication_date,
-                uid,
-                data: { cover_image, title, author, summary },
+        {posts.length > 0 ? (
+          <div className="grid gap-8 md:grid-cols-2">
+            {posts.map(
+              (
+                {
+                  last_publication_date,
+                  uid,
+                  data: { cover_image, title, author, summary },
+                },
+                i,
+              ) => {
+                return (
+                  <Post
+                    key={i}
+                    last_publication_date={last_publication_date}
+                    uid={uid}
+                    cover_image={cover_image}
+                    title={title}
+                    author={author}
+                    summary={summary}
+                  />
+                )
               },
-              i,
-            ) => {
-              return (
-                <Post
-                  key={i}
-                  last_publication_date={last_publication_date}
-                  uid={uid}
-                  cover_image={cover_image}
-                  title={title}
-                  author={author}
-                  summary={summary}
-                />
-              )
-            },
-          )}
-        </div>
+            )}
+          </div>
+        ) : (
+          <p>No posts to show.</p>
+        )}
       </section>
     </>
   )
