@@ -317,6 +317,39 @@ export interface SiteSettingsDocumentDataPhoneNumbersItem {
  */
 interface SiteSettingsDocumentData {
   /**
+   * Pre College Name field in *Site Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_settings.pre_college_name
+   * - **Tab**: Header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  pre_college_name: prismic.KeyTextField
+
+  /**
+   * College Name field in *Site Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_settings.college_name
+   * - **Tab**: Header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  college_name: prismic.KeyTextField
+
+  /**
+   * College Address field in *Site Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_settings.college_address
+   * - **Tab**: Header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  college_address: prismic.KeyTextField
+
+  /**
    * Navigation Items field in *Site Settings*
    *
    * - **Field Type**: Group

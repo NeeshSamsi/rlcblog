@@ -6,6 +6,27 @@
   "status": true,
   "json": {
     "Header": {
+      "pre_college_name": {
+        "type": "Text",
+        "config": {
+          "label": "Pre College Name",
+          "placeholder": ""
+        }
+      },
+      "college_name": {
+        "type": "Text",
+        "config": {
+          "label": "College Name",
+          "placeholder": ""
+        }
+      },
+      "college_address": {
+        "type": "Text",
+        "config": {
+          "label": "College Address",
+          "placeholder": ""
+        }
+      },
       "navigation_items": {
         "type": "Group",
         "config": {
