@@ -54,9 +54,8 @@ export async function generateMetadata() {
     alternates: {
       canonical: "/",
     },
-    verification: { google: "" },
+    verification: { google: "38LuebO4j0DPN0B3jwmNTKIFcdP6SfDu9MnvQaDLBs0" },
   }
-
   return meta
 }
 
