@@ -17,7 +17,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={cn("mb-12 mt-8 md:mb-16 md:mt-14", {
-        "flex flex-col items-center gap-8 text-center lg:flex-row lg:gap-4":
+        "flex flex-col items-center gap-8 text-center lg:flex-row lg:gap-4 lg:text-start":
           slice.variation === "withImage",
       })}
     >
@@ -33,7 +33,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <PrismicNextImage
           field={slice.primary.image}
           priority
-          sizes="100vw"
+          sizes="(min-width: 380px) 288px, calc(33.33vw + 168px)"
           className="aspect-square size-72"
         />
       )}

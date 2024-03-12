@@ -23,6 +23,7 @@ const Message = ({ slice }: MessageProps): JSX.Element => {
         <div className="grid gap-2">
           <PrismicNextImage
             field={slice.primary.avatar}
+            // sizes="100vw"
             className="aspect-square object-cover"
           />
           <p className="font-serif text-xl font-medium md:text-center md:text-2xl">

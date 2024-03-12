@@ -24,6 +24,7 @@ const Founders = ({ slice }: FoundersProps): JSX.Element => {
         >
           <PrismicNextImage
             field={avatar}
+            sizes="208px"
             className="aspect-square w-52 object-cover"
           />
           <div>

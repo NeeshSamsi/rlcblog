@@ -23,6 +23,7 @@ export default async function Footer() {
             width={112}
             height={112}
             className="aspect-square w-28"
+            sizes="112px"
           />
           <p className="max-w-[35ch]">{description}</p>
         </div>

@@ -16,6 +16,7 @@ export default async function Header() {
         height={180}
         className="aspect-square w-44"
         priority
+        sizes="176px"
       />
       <div className="space-y-2 text-center">
         <p className="text-lg uppercase md:text-2xl">{pre_college_name}</p>

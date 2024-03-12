@@ -37,6 +37,8 @@ export default async function BlogPost({ params: { uid } }: ParamsType) {
     <main className="prose prose-lg my-12 font-sans md:prose-xl md:my-16">
       <PrismicNextImage
         field={cover_image}
+        priority
+        // sizes="100vw"
         className="aspect-[4/3] w-full object-cover"
       />
       <h1 className="font-serif text-3xl font-semibold md:text-5xl">{title}</h1>
