@@ -30,8 +30,8 @@
       "items": {}
     },
     {
-      "id": "centered",
-      "name": "Hero - Centered",
+      "id": "withImage",
+      "name": "With Image",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -49,6 +49,14 @@
           "config": {
             "label": "Tagline",
             "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

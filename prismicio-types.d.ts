@@ -709,7 +709,7 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 /**
  * Primary content in *Hero → Primary*
  */
-export interface HeroSliceCenteredPrimary {
+export interface HeroSliceWithImagePrimary {
   /**
    * Heading field in *Hero → Primary*
    *
@@ -729,25 +729,35 @@ export interface HeroSliceCenteredPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   tagline: prismic.KeyTextField
+
+  /**
+   * Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
 }
 
 /**
- * Hero - Centered variation for Hero Slice
+ * With Image variation for Hero Slice
  *
- * - **API ID**: `centered`
+ * - **API ID**: `withImage`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HeroSliceCentered = prismic.SharedSliceVariation<
-  "centered",
-  Simplify<HeroSliceCenteredPrimary>,
+export type HeroSliceWithImage = prismic.SharedSliceVariation<
+  "withImage",
+  Simplify<HeroSliceWithImagePrimary>,
   never
 >
 
 /**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault | HeroSliceCentered
+type HeroSliceVariation = HeroSliceDefault | HeroSliceWithImage
 
 /**
  * Hero Shared Slice
@@ -870,10 +880,10 @@ declare module "@prismicio/client" {
       GuidelinesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
-      HeroSliceCenteredPrimary,
+      HeroSliceWithImagePrimary,
       HeroSliceVariation,
       HeroSliceDefault,
-      HeroSliceCentered,
+      HeroSliceWithImage,
       MessageSlice,
       MessageSliceDefaultPrimary,
       MessageSliceVariation,
